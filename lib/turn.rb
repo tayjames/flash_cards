@@ -1,9 +1,12 @@
+require 'pry'
+require './lib/card'
+
 class Turn
   attr_reader :guess, :card
 
-  def initialize(string, card)
-   @guess = string
-   @card = card
+  def initialize(guess, card)
+   @guess = guess
+   @card = card #.new(___) ???
   end
 
   def correct?

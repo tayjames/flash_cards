@@ -1,4 +1,7 @@
 require 'pry'
+require './lib/card'
+require './lib/turn'
+
 class Deck
   attr_reader :cards
 
@@ -12,9 +15,11 @@ class Deck
 
   def cards_in_category(category) #I think I need to create an empty array to store matching categories
     matches_category = []
-    @cards.each |cards|
-    if card.category == category
-      matches_category << card
+    cards.each do |card|
+      if card.category == category #see if there is an enumerable to shorten this up
+        matches_category << card
+      end
     end
+    matches_category
   end
-  end
+end

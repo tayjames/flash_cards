@@ -1,3 +1,4 @@
+require 'pry'
 require 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
@@ -13,7 +14,6 @@ class DeckTest < Minitest::Test
     cards = [card_1, card_2, card_3]
 
     deck = Deck.new(cards)
-
     assert_instance_of Deck, deck
   end
 
@@ -36,7 +36,7 @@ class DeckTest < Minitest::Test
 
     deck = Deck.new(cards)
 
-    assert_equal
+    assert_equal [card_1], deck.cards_in_category(:Geography)
     #is there a way to test all of the categories at once or will i have to test for each specific category that i've created an instance for.
   end
 
